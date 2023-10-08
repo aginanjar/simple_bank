@@ -1,0 +1,11 @@
+#/usr/bin/bash
+
+## Uncoment docker pull postgres if haven't install it on your local environment
+# docker pull postgres:12-alpine
+
+# Run docker postgres
+docker run --name postgres12 \
+  -e POSTGRES_USER=root \
+  -e POSTGRES_PASSWORD=secret \
+  -p 5432:5432 \
+  -d postgres:12-alpine
